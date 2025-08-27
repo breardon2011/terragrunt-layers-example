@@ -48,3 +48,9 @@ output "network_config" {
     subnet_ids = null_resource.subnets[*].id
   }
 } 
+
+
+
+
+
+
