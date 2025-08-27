@@ -34,7 +34,7 @@ remote_state {
   config = {
     bucket         = "terragrunt-layers-example-brian"
     key            = "${path_relative_to_include()}/terraform.tfstate"
-    region         = "us-east-1"
+    region         = "us-east-2"
     encrypt        = true
     dynamodb_table = "tg-state-lock"
   }
