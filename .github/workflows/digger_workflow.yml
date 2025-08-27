@@ -25,15 +25,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: ${{ fromJSON(github.event.inputs.spec).job_id }}
         run: echo "job id ${{ fromJSON(github.event.inputs.spec).job_id }}"
-      - uses: diggerhq/digger@v0.6.118
+      - name: digger
+        uses: diggerhq/digger@fix/breardon2011/aliasing
         with:
           digger-spec: ${{ inputs.spec }}
-          setup-aws: true
+          digger-private-key: ${{ secrets.DIGGER_PRIVATE_KEY }}
+          setup-aws: false
+          disable-locking: true
           setup-terragrunt: true
           setup-terraform: true
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          cache-dependencies: true
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
