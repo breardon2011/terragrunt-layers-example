@@ -8,6 +8,12 @@ variable "project_name" {
   type        = string
 }
 
+
+variable "region" {
+  description = "AWS region"
+  type        = string
+}
+
 resource "null_resource" "security_groups" {
   count = 2
 
