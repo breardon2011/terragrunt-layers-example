@@ -1,3 +1,3 @@
 environment  = "development"
 project_name = "terragrunt-example"
-region       = "us-west-2" 
+region       = "us-east-2" 
