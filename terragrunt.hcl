@@ -43,8 +43,3 @@ remote_state {
 inputs = {
   environment = "development"
 } 
-
-
-
-
-
