@@ -27,4 +27,9 @@ inputs = {
   project_name  = "terragrunt-example"
   vpc_id       = dependency.network.outputs.vpc_id
   iam_role_arns = dependency.security.outputs.iam_role_arns
+
+
+
+
+
 } 
