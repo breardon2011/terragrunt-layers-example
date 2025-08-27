@@ -66,3 +66,10 @@ output "compute_config" {
     load_balancer_id = null_resource.load_balancer.id
   }
 } 
+
+
+
+
+
+
+
