@@ -18,7 +18,7 @@ workflows:
       filter_regex: "((?i)secret.*:\\s\")[^\"]*"
       steps:
         - run: terragrunt init --terragrunt-non-interactive -input=false -reconfigure
-        - run: terragrunt plan --provider-cache=false -input=false -parallelism=5 -refresh -no-color -out $DIGGER_PLANFILE
+        - run: terragrunt plan -input=false -parallelism=5 -refresh -no-color -out $DIGGER_PLANFILE
     apply:
       steps:
         - init --terragrunt-non-interactive
