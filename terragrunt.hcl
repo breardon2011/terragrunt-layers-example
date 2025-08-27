@@ -32,7 +32,7 @@ remote_state {
     if_exists = "overwrite"
   }
   config = {
-    bucket         = "terragrunt-layers-example-brian,"
+    bucket         = "terragrunt-layers-example-brian"
     key            = "${path_relative_to_include()}/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
